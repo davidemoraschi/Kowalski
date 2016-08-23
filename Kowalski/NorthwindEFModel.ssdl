@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NorthwindEFModel.Store" Alias="Self" Provider="EFOracleProvider" ProviderManifestToken="10g" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+  <EntityContainer Name="NorthwindEFModelStoreContainer">
+    <EntitySet Name="Categories" EntityType="NorthwindEFModel.Store.Categories" store:Type="Tables"  />
+    <EntitySet Name="Customers" EntityType="NorthwindEFModel.Store.Customers" store:Type="Tables"  />
+    <EntitySet Name="Employees" EntityType="NorthwindEFModel.Store.Employees" store:Type="Tables"  />
+    <EntitySet Name="EmployeesTerritories" EntityType="NorthwindEFModel.Store.EmployeesTerritories" store:Type="Tables"  />
+    <EntitySet Name="InternationalOrders" EntityType="NorthwindEFModel.Store.InternationalOrders" store:Type="Tables"  />
+    <EntitySet Name="OracleDataTypes" EntityType="NorthwindEFModel.Store.OracleDataTypes" store:Type="Tables"  />
+    <EntitySet Name="OrderDetails" EntityType="NorthwindEFModel.Store.OrderDetails" store:Type="Tables"  />
+    <EntitySet Name="Orders" EntityType="NorthwindEFModel.Store.Orders" store:Type="Tables"  />
+    <EntitySet Name="PreviousEmployees" EntityType="NorthwindEFModel.Store.PreviousEmployees" store:Type="Tables"  />
+    <EntitySet Name="Products" EntityType="NorthwindEFModel.Store.Products" store:Type="Tables"  />
+    <EntitySet Name="Regions" EntityType="NorthwindEFModel.Store.Regions" store:Type="Tables"  />
+    <EntitySet Name="Shippers" EntityType="NorthwindEFModel.Store.Shippers" store:Type="Tables"  />
+    <EntitySet Name="Suppliers" EntityType="NorthwindEFModel.Store.Suppliers" store:Type="Tables"  />
+    <EntitySet Name="Territories" EntityType="NorthwindEFModel.Store.Territories" store:Type="Tables"  />
+    <AssociationSet Name="SYS_C009204" Association="NorthwindEFModel.Store.SYS_C009204">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="Employees1" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009206" Association="NorthwindEFModel.Store.SYS_C009206">
+      <End Role="Shippers" EntitySet="Shippers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009207" Association="NorthwindEFModel.Store.SYS_C009207">
+      <End Role="Customers" EntitySet="Customers" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009217" Association="NorthwindEFModel.Store.SYS_C009217">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009218" Association="NorthwindEFModel.Store.SYS_C009218">
+      <End Role="Suppliers" EntitySet="Suppliers" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009226" Association="NorthwindEFModel.Store.SYS_C009226">
+      <End Role="Regions" EntitySet="Regions" />
+      <End Role="Territories" EntitySet="Territories" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009233" Association="NorthwindEFModel.Store.SYS_C009233">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009234" Association="NorthwindEFModel.Store.SYS_C009234">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009238" Association="NorthwindEFModel.Store.SYS_C009238">
+      <End Role="Employees" EntitySet="Employees" />
+      <End Role="EmployeesTerritories" EntitySet="EmployeesTerritories" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009239" Association="NorthwindEFModel.Store.SYS_C009239">
+      <End Role="Territories" EntitySet="Territories" />
+      <End Role="EmployeesTerritories" EntitySet="EmployeesTerritories" />
+    </AssociationSet>
+    <AssociationSet Name="SYS_C009244" Association="NorthwindEFModel.Store.SYS_C009244">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="InternationalOrders" EntitySet="InternationalOrders" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Categories">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="CategoryName" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="Description" Type="varchar2" MaxLength="1000" />
+    <Property Name="Picture" Type="raw" MaxLength="2000" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="CompanyName" Type="varchar2" Nullable="false" MaxLength="40" />
+    <Property Name="ContactName" Type="varchar2" MaxLength="30" />
+    <Property Name="ContactTitle" Type="varchar2" MaxLength="30" />
+    <Property Name="Address" Type="varchar2" MaxLength="60" />
+    <Property Name="City" Type="varchar2" MaxLength="32" />
+    <Property Name="Region" Type="varchar2" MaxLength="15" />
+    <Property Name="PostalCode" Type="varchar2" MaxLength="10" />
+    <Property Name="Country" Type="varchar2" MaxLength="15" />
+    <Property Name="Phone" Type="varchar2" MaxLength="24" />
+    <Property Name="Fax" Type="varchar2" MaxLength="24" />
+  </EntityType>
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="LastName" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="FirstName" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="Title" Type="varchar2" MaxLength="30" />
+    <Property Name="TitleOfCourtesy" Type="varchar2" MaxLength="25" />
+    <Property Name="BirthDate" Type="date" />
+    <Property Name="HireDate" Type="date" />
+    <Property Name="Address" Type="varchar2" MaxLength="60" />
+    <Property Name="City" Type="varchar2" MaxLength="15" />
+    <Property Name="Region" Type="varchar2" MaxLength="15" />
+    <Property Name="PostalCode" Type="varchar2" MaxLength="10" />
+    <Property Name="Country" Type="varchar2" MaxLength="15" />
+    <Property Name="HomePhone" Type="varchar2" MaxLength="24" />
+    <Property Name="Extension" Type="varchar2" MaxLength="4" />
+    <Property Name="Photo" Type="blob" />
+    <Property Name="Notes" Type="clob" />
+    <Property Name="ReportsTo" Type="number" Precision="11" />
+    <Property Name="PhotoPath" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="EmployeesTerritories">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+      <PropertyRef Name="TerritoryID" />
+    </Key>
+    <Property Name="EmployeeID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="TerritoryID" Type="number" Nullable="false" Precision="11" />
+  </EntityType>
+  <EntityType Name="InternationalOrders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="CustomsDescription" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="ExciseTax" Type="number" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OracleDataTypes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="GuidColumn" Type="raw" MaxLength="16" />
+  </EntityType>
+  <EntityType Name="OrderDetails">
+    <Key>
+      <PropertyRef Name="OrderID" />
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="OrderID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="ProductID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="UnitPrice" Type="number" Nullable="false" />
+    <Property Name="Quantity" Type="number" Nullable="false" Precision="5" />
+    <Property Name="Discount" Type="number" Nullable="false" Precision="19" Scale="4" />
+  </EntityType>
+  <!--Se encontraron errores durante la generación:
+advertencia 6005: No se admite el tipo de datos 'timestamp(9)', se excluyó la columna 'OrderDate' en la tabla 'dbo.Orders'.
+advertencia 6005: No se admite el tipo de datos 'timestamp(3)', se excluyó la columna 'RequiredDate' en la tabla 'dbo.Orders'.
+-->
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="CustomerID" Type="varchar2" MaxLength="5" />
+    <Property Name="EmployeeID" Type="number" Precision="11" />
+    <Property Name="ShippedDate" Type="date" />
+    <Property Name="ShipVia" Type="number" Precision="11" />
+    <Property Name="Freight" Type="number" Precision="19" Scale="8" />
+    <Property Name="ShipName" Type="varchar2" MaxLength="40" />
+    <Property Name="ShipAddress" Type="varchar2" MaxLength="60" />
+    <Property Name="ShipCity" Type="varchar2" MaxLength="32" />
+    <Property Name="ShipRegion" Type="varchar2" MaxLength="15" />
+    <Property Name="ShipPostalCode" Type="varchar2" MaxLength="10" />
+    <Property Name="ShipCountry" Type="varchar2" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="PreviousEmployees">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="LastName" Type="varchar2" Nullable="false" MaxLength="20" />
+    <Property Name="FirstName" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="Title" Type="varchar2" MaxLength="30" />
+    <Property Name="TitleOfCourtesy" Type="varchar2" MaxLength="25" />
+    <Property Name="BirthDate" Type="date" />
+    <Property Name="HireDate" Type="date" />
+    <Property Name="Address" Type="varchar2" MaxLength="60" />
+    <Property Name="City" Type="varchar2" MaxLength="32" />
+    <Property Name="Region" Type="varchar2" MaxLength="15" />
+    <Property Name="PostalCode" Type="varchar2" MaxLength="10" />
+    <Property Name="Country" Type="varchar2" MaxLength="32" />
+    <Property Name="HomePhone" Type="varchar2" MaxLength="24" />
+    <Property Name="Extension" Type="varchar2" MaxLength="4" />
+    <Property Name="Photo" Type="blob" />
+    <Property Name="Notes" Type="clob" />
+    <Property Name="PhotoPath" Type="varchar2" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="ProductName" Type="varchar2" Nullable="false" MaxLength="40" />
+    <Property Name="SupplierID" Type="number" Precision="11" />
+    <Property Name="CategoryID" Type="number" Precision="11" />
+    <Property Name="QuantityPerUnit" Type="varchar2" MaxLength="20" />
+    <Property Name="UnitPrice" Type="number" />
+    <Property Name="UnitsInStock" Type="number" Precision="5" />
+    <Property Name="UnitsOnOrder" Type="number" Precision="5" />
+    <Property Name="ReorderLevel" Type="number" Precision="5" />
+    <Property Name="Discontinued" Type="number" Nullable="false" Precision="3" />
+    <Property Name="DiscontinuedDate" Type="date" />
+  </EntityType>
+  <EntityType Name="Regions">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="RegionDescription" Type="varchar2" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Shippers">
+    <Key>
+      <PropertyRef Name="ShipperID" />
+    </Key>
+    <Property Name="ShipperID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="CompanyName" Type="varchar2" Nullable="false" MaxLength="40" />
+    <Property Name="Phone" Type="varchar2" MaxLength="24" />
+  </EntityType>
+  <EntityType Name="Suppliers">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="CompanyName" Type="varchar2" Nullable="false" MaxLength="40" />
+    <Property Name="ContactName" Type="varchar2" MaxLength="30" />
+    <Property Name="ContactTitle" Type="varchar2" MaxLength="30" />
+    <Property Name="Address" Type="varchar2" MaxLength="60" />
+    <Property Name="City" Type="varchar2" MaxLength="15" />
+    <Property Name="Region" Type="varchar2" MaxLength="15" />
+    <Property Name="PostalCode" Type="varchar2" MaxLength="10" />
+    <Property Name="Country" Type="varchar2" MaxLength="15" />
+    <Property Name="Phone" Type="varchar2" MaxLength="24" />
+    <Property Name="Fax" Type="varchar2" MaxLength="24" />
+    <Property Name="HomePage" Type="clob" />
+  </EntityType>
+  <EntityType Name="Territories">
+    <Key>
+      <PropertyRef Name="TerritoryID" />
+    </Key>
+    <Property Name="TerritoryID" Type="number" Nullable="false" Precision="11" />
+    <Property Name="TerritoryDescription" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="RegionID" Type="number" Nullable="false" Precision="11" />
+  </EntityType>
+  <Association Name="SYS_C009204">
+    <End Role="Employees" Type="NorthwindEFModel.Store.Employees" Multiplicity="0..1" />
+    <End Role="Employees1" Type="NorthwindEFModel.Store.Employees" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Employees1">
+        <PropertyRef Name="ReportsTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009206">
+    <End Role="Shippers" Type="NorthwindEFModel.Store.Shippers" Multiplicity="0..1" />
+    <End Role="Orders" Type="NorthwindEFModel.Store.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shippers">
+        <PropertyRef Name="ShipperID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="ShipVia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009207">
+    <End Role="Customers" Type="NorthwindEFModel.Store.Customers" Multiplicity="0..1" />
+    <End Role="Orders" Type="NorthwindEFModel.Store.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customers">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009217">
+    <End Role="Categories" Type="NorthwindEFModel.Store.Categories" Multiplicity="0..1" />
+    <End Role="Products" Type="NorthwindEFModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009218">
+    <End Role="Suppliers" Type="NorthwindEFModel.Store.Suppliers" Multiplicity="0..1" />
+    <End Role="Products" Type="NorthwindEFModel.Store.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Suppliers">
+        <PropertyRef Name="SupplierID" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009226">
+    <End Role="Regions" Type="NorthwindEFModel.Store.Regions" Multiplicity="1" />
+    <End Role="Territories" Type="NorthwindEFModel.Store.Territories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Regions">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="Territories">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009233">
+    <End Role="Orders" Type="NorthwindEFModel.Store.Orders" Multiplicity="1" />
+    <End Role="OrderDetails" Type="NorthwindEFModel.Store.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009234">
+    <End Role="Products" Type="NorthwindEFModel.Store.Products" Multiplicity="1" />
+    <End Role="OrderDetails" Type="NorthwindEFModel.Store.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009238">
+    <End Role="Employees" Type="NorthwindEFModel.Store.Employees" Multiplicity="1" />
+    <End Role="EmployeesTerritories" Type="NorthwindEFModel.Store.EmployeesTerritories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employees">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="EmployeesTerritories">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009239">
+    <End Role="Territories" Type="NorthwindEFModel.Store.Territories" Multiplicity="1" />
+    <End Role="EmployeesTerritories" Type="NorthwindEFModel.Store.EmployeesTerritories" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Territories">
+        <PropertyRef Name="TerritoryID" />
+      </Principal>
+      <Dependent Role="EmployeesTerritories">
+        <PropertyRef Name="TerritoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SYS_C009244">
+    <End Role="Orders" Type="NorthwindEFModel.Store.Orders" Multiplicity="1" />
+    <End Role="InternationalOrders" Type="NorthwindEFModel.Store.InternationalOrders" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="InternationalOrders">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AddIntegers" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" >
+    <Parameter Name="ARGA" Type="number" Mode="In" />
+    <Parameter Name="ARGB" Type="number" Mode="In" />
+  </Function>
+  <Function Name="AddIntegers_OutputParam" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" >
+    <Parameter Name="ARGA" Type="number" Mode="In" />
+    <Parameter Name="ARGB" Type="number" Mode="In" />
+    <Parameter Name="RESULT" Type="number" Mode="Out" />
+  </Function>
+  <Function Name="ConcatStrings_OutputParam" ReturnType="nvarchar2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" >
+    <Parameter Name="ARGA" Type="nvarchar2" Mode="In" />
+    <Parameter Name="ARGB" Type="nvarchar2" Mode="In" />
+    <Parameter Name="RESULT" Type="nvarchar2" Mode="Out" />
+  </Function>
+  <Function Name="EchoIntegerFunction" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" >
+    <Parameter Name="INARG" Type="number" Mode="In" />
+  </Function>
+  <Function Name="EchoStringFunction" ReturnType="nvarchar2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" >
+    <Parameter Name="INARG" Type="nvarchar2" Mode="In" />
+  </Function>
+  <Function Name="IntegerFunctionNoArgs" ReturnType="number" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion"  />
+  <Function Name="DoAddIntegers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="DoAddIntegers">
+    <Parameter Name="ARGA" Type="number" Mode="In" />
+    <Parameter Name="ARGB" Type="number" Mode="In" />
+    <Parameter Name="RESULT" Type="number" Mode="Out" />
+  </Function>
+  <Function Name="DoConcatStrings" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="DoConcatStrings">
+    <Parameter Name="ARGA" Type="nvarchar2" Mode="In" />
+    <Parameter Name="ARGB" Type="nvarchar2" Mode="In" />
+    <Parameter Name="RESULT" Type="nvarchar2" Mode="Out" />
+  </Function>
+  <Function Name="GetCategories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GetCategories">
+    <Parameter Name="CATEGORYCURSOR" Type="ref cursor" Mode="Out" />
+  </Function>
+  <Function Name="GetCategoriesAndProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GetCategoriesAndProducts">
+    <Parameter Name="SOMEINPUTPARAM" Type="number" Mode="In" />
+    <Parameter Name="CATEGORYCURSOR" Type="ref cursor" Mode="Out" />
+    <Parameter Name="PRODUCTCURSOR" Type="ref cursor" Mode="Out" />
+  </Function>
+  <Function Name="GetCategories2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GetCategories2">
+    <Parameter Name="CATEGORYCURSOR" Type="ref cursor" Mode="Out" />
+  </Function>
+  <Function Name="NullProc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="NullProc" />
+  <Function Name="TEST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="TEST" />
+</Schema>

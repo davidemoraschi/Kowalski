@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="NorthwindEFModelStoreContainer" CdmEntityContainer="NorthwindEFModelContext">
+    <EntitySetMapping Name="Categories" StoreEntitySet="Categories" TypeName="NorthwindEFModel.Categories">
+      <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+      <ScalarProperty Name="Description" ColumnName="Description" />
+      <ScalarProperty Name="Picture" ColumnName="Picture" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers" StoreEntitySet="Customers" TypeName="NorthwindEFModel.Customers">
+      <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+      <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+      <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+      <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+      <ScalarProperty Name="Address" ColumnName="Address" />
+      <ScalarProperty Name="City" ColumnName="City" />
+      <ScalarProperty Name="Region" ColumnName="Region" />
+      <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+      <ScalarProperty Name="Country" ColumnName="Country" />
+      <ScalarProperty Name="Phone" ColumnName="Phone" />
+      <ScalarProperty Name="Fax" ColumnName="Fax" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees" StoreEntitySet="Employees" TypeName="NorthwindEFModel.Employees">
+      <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      <ScalarProperty Name="LastName" ColumnName="LastName" />
+      <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+      <ScalarProperty Name="Title" ColumnName="Title" />
+      <ScalarProperty Name="TitleOfCourtesy" ColumnName="TitleOfCourtesy" />
+      <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+      <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+      <ScalarProperty Name="Address" ColumnName="Address" />
+      <ScalarProperty Name="City" ColumnName="City" />
+      <ScalarProperty Name="Region" ColumnName="Region" />
+      <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+      <ScalarProperty Name="Country" ColumnName="Country" />
+      <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+      <ScalarProperty Name="Extension" ColumnName="Extension" />
+      <ScalarProperty Name="Photo" ColumnName="Photo" />
+      <ScalarProperty Name="Notes" ColumnName="Notes" />
+      <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="InternationalOrders" StoreEntitySet="InternationalOrders" TypeName="NorthwindEFModel.InternationalOrders">
+      <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+      <ScalarProperty Name="CustomsDescription" ColumnName="CustomsDescription" />
+      <ScalarProperty Name="ExciseTax" ColumnName="ExciseTax" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="OracleDataTypes" StoreEntitySet="OracleDataTypes" TypeName="NorthwindEFModel.OracleDataTypes">
+      <ScalarProperty Name="ID" ColumnName="ID" />
+      <ScalarProperty Name="GuidColumn" ColumnName="GuidColumn" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails" StoreEntitySet="OrderDetails" TypeName="NorthwindEFModel.OrderDetails">
+      <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+      <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+      <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+      <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+      <ScalarProperty Name="Discount" ColumnName="Discount" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders" StoreEntitySet="Orders" TypeName="NorthwindEFModel.Orders">
+      <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+      <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      <ScalarProperty Name="ShippedDate" ColumnName="ShippedDate" />
+      <ScalarProperty Name="Freight" ColumnName="Freight" />
+      <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+      <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+      <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+      <ScalarProperty Name="ShipRegion" ColumnName="ShipRegion" />
+      <ScalarProperty Name="ShipPostalCode" ColumnName="ShipPostalCode" />
+      <ScalarProperty Name="ShipCountry" ColumnName="ShipCountry" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="PreviousEmployees" StoreEntitySet="PreviousEmployees" TypeName="NorthwindEFModel.PreviousEmployees">
+      <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      <ScalarProperty Name="LastName" ColumnName="LastName" />
+      <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+      <ScalarProperty Name="Title" ColumnName="Title" />
+      <ScalarProperty Name="TitleOfCourtesy" ColumnName="TitleOfCourtesy" />
+      <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+      <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+      <ScalarProperty Name="Address" ColumnName="Address" />
+      <ScalarProperty Name="City" ColumnName="City" />
+      <ScalarProperty Name="Region" ColumnName="Region" />
+      <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+      <ScalarProperty Name="Country" ColumnName="Country" />
+      <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+      <ScalarProperty Name="Extension" ColumnName="Extension" />
+      <ScalarProperty Name="Photo" ColumnName="Photo" />
+      <ScalarProperty Name="Notes" ColumnName="Notes" />
+      <ScalarProperty Name="PhotoPath" ColumnName="PhotoPath" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products" StoreEntitySet="Products" TypeName="NorthwindEFModel.Products">
+      <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+      <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+      <ScalarProperty Name="QuantityPerUnit" ColumnName="QuantityPerUnit" />
+      <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+      <ScalarProperty Name="UnitsInStock" ColumnName="UnitsInStock" />
+      <ScalarProperty Name="UnitsOnOrder" ColumnName="UnitsOnOrder" />
+      <ScalarProperty Name="ReorderLevel" ColumnName="ReorderLevel" />
+      <ScalarProperty Name="Discontinued" ColumnName="Discontinued" />
+      <ScalarProperty Name="DiscontinuedDate" ColumnName="DiscontinuedDate" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regions" StoreEntitySet="Regions" TypeName="NorthwindEFModel.Regions">
+      <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+      <ScalarProperty Name="RegionDescription" ColumnName="RegionDescription" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shippers" StoreEntitySet="Shippers" TypeName="NorthwindEFModel.Shippers">
+      <ScalarProperty Name="ShipperID" ColumnName="ShipperID" />
+      <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+      <ScalarProperty Name="Phone" ColumnName="Phone" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers" StoreEntitySet="Suppliers" TypeName="NorthwindEFModel.Suppliers">
+      <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+      <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+      <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+      <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+      <ScalarProperty Name="Address" ColumnName="Address" />
+      <ScalarProperty Name="City" ColumnName="City" />
+      <ScalarProperty Name="Region" ColumnName="Region" />
+      <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+      <ScalarProperty Name="Country" ColumnName="Country" />
+      <ScalarProperty Name="Phone" ColumnName="Phone" />
+      <ScalarProperty Name="Fax" ColumnName="Fax" />
+      <ScalarProperty Name="HomePage" ColumnName="HomePage" />
+    </EntitySetMapping>
+    <EntitySetMapping Name="Territories" StoreEntitySet="Territories" TypeName="NorthwindEFModel.Territories">
+      <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+      <ScalarProperty Name="TerritoryDescription" ColumnName="TerritoryDescription" />
+    </EntitySetMapping>
+    <AssociationSetMapping Name="SYS_C009217" TypeName="NorthwindEFModel.SYS_C009217" StoreEntitySet="Products">
+      <EndProperty Name="Categories">
+        <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+      </EndProperty>
+      <EndProperty Name="Products">
+        <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+      </EndProperty>
+      <Condition ColumnName="CategoryID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C009207" TypeName="NorthwindEFModel.SYS_C009207" StoreEntitySet="Orders">
+      <EndProperty Name="Customers">
+        <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+      </EndProperty>
+      <EndProperty Name="Orders">
+        <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+      </EndProperty>
+      <Condition ColumnName="CustomerID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C009204" TypeName="NorthwindEFModel.SYS_C009204" StoreEntitySet="Employees">
+      <EndProperty Name="Employees">
+        <ScalarProperty Name="EmployeeID" ColumnName="ReportsTo" />
+      </EndProperty>
+      <EndProperty Name="Employees1">
+        <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      </EndProperty>
+      <Condition ColumnName="ReportsTo" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C009244" TypeName="NorthwindEFModel.SYS_C009244" StoreEntitySet="InternationalOrders">
+      <EndProperty Name="Orders">
+        <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+      </EndProperty>
+      <EndProperty Name="InternationalOrders">
+        <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C009233" TypeName="NorthwindEFModel.SYS_C009233" StoreEntitySet="OrderDetails">
+      <EndProperty Name="Orders">
+        <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+      </EndProperty>
+      <EndProperty Name="OrderDetails">
+        <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C009234" TypeName="NorthwindEFModel.SYS_C009234" StoreEntitySet="OrderDetails">
+      <EndProperty Name="Products">
+        <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+      </EndProperty>
+      <EndProperty Name="OrderDetails">
+        <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C009206" TypeName="NorthwindEFModel.SYS_C009206" StoreEntitySet="Orders">
+      <EndProperty Name="Shippers">
+        <ScalarProperty Name="ShipperID" ColumnName="ShipVia" />
+      </EndProperty>
+      <EndProperty Name="Orders">
+        <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+      </EndProperty>
+      <Condition ColumnName="ShipVia" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C009218" TypeName="NorthwindEFModel.SYS_C009218" StoreEntitySet="Products">
+      <EndProperty Name="Suppliers">
+        <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+      </EndProperty>
+      <EndProperty Name="Products">
+        <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+      </EndProperty>
+      <Condition ColumnName="SupplierID" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SYS_C009226" TypeName="NorthwindEFModel.SYS_C009226" StoreEntitySet="Territories">
+      <EndProperty Name="Regions">
+        <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+      </EndProperty>
+      <EndProperty Name="Territories">
+        <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EmployeesTerritories" TypeName="NorthwindEFModel.EmployeesTerritories" StoreEntitySet="EmployeesTerritories">
+      <EndProperty Name="Employees">
+        <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+      </EndProperty>
+      <EndProperty Name="Territories">
+        <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

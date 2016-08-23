@@ -1,0 +1,6 @@
+C:\My Dropbox\Visual Studio 2008\Projects\Kowalski\Kowalski\obj\Debug\ResolveAssemblyReference.cache
+C:\My Dropbox\Visual Studio 2008\Projects\Kowalski\Kowalski\bin\Debug\Kowalski.exe.config
+C:\My Dropbox\Visual Studio 2008\Projects\Kowalski\Kowalski\bin\Debug\Kowalski.exe
+C:\My Dropbox\Visual Studio 2008\Projects\Kowalski\Kowalski\bin\Debug\Kowalski.pdb
+C:\My Dropbox\Visual Studio 2008\Projects\Kowalski\Kowalski\obj\Debug\Kowalski.exe
+C:\My Dropbox\Visual Studio 2008\Projects\Kowalski\Kowalski\obj\Debug\Kowalski.pdb
